@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Put your description here.">
+        <meta name="theme-color" content="#317EFB"/>
+        <title>appletea flex</title>
+    </head>
+    <style>
+
+        *{
+        box-sizing: border-box;
+        font-family:sans-serif;
+        }
+        body{
+            margin: 0;
+        }
+        .inside{
+            display: flex;
+            flex-wrap: wrap;
+            width:80%;
+            margin:auto;
+        }
+        img{
+            width:100%;
+            height: auto;
+        }
+
+        /* header1 */
+
+        
+        .row1{
+            background-color: white;
+            display:flex;
+            flex-wrap: wrap;
+            background-image: url('/images/bgpic.avif'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+        .row1bg{
+            background:rgba(0, 0, 0, 0.5); 
+            width:100%;
+        }
+        .head1{
+            display: flex; 
+            flex-wrap: wrap; 
+            width:100%;
+            align-items: center;
+  
+        }
+        .logo{
+            width:50%; 
+            display: flex; 
+            flex-wrap: wrap; 
+            color:white;
+        }
+        .nav{
+            justify-content:space-between;
+            color:white;
+            width:50%; 
+            display: flex; 
+            flex-wrap: wrap;
+        }
+        .nav p{
+            padding: 5px ;
+        }
+        .nav p:hover{
+            background-color: black;
+            
+        }
+
+        /* header2 */
+
+        .row2{
+            display:flex;
+            flex-wrap: wrap;
+            background-image: url('/images/bgpic.avif'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center bottom; 
+            height:500px; 
+            align-items: center; 
+            text-align: center;
+        }
+        .center{
+            width:100%;
+        }
+        .center > h1{
+            font-style: italic;
+        }
+        .center > button{
+            padding: 6px 10px; 
+            background-color: #ffc20d; 
+            color:black; 
+            font-size: 17px; 
+            margin-top: 8px;
+            margin-right: 16px; 
+            border: 1px solid #ffc20d;
+        }
+
+        /* header3 */
+
+        .row3{
+            padding:30px;
+        }
+        .aboutus{
+            text-align: center;
+        }
+        .cando{
+            width:100%; 
+            display: flex; 
+            flex-wrap: wrap; 
+            padding:30px;
+        }
+        .cando1{
+            width:50%; 
+            display: flex; 
+            flex-wrap: wrap; 
+            padding:30px;
+        }
+        .cando1 > p{
+            font-size: medium;
+        }
+        .cando2{
+            width:50%; 
+            display: flex; 
+            flex-wrap: wrap; 
+            align-content: center;
+            padding:30px;
+        }
+        input[type=range]{
+            width:100%;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 10px;
+        cursor: pointer;
+        background: #ffc20d;
+        }
+        input[type=range]::-webkit-slider-thumb {
+        height: 26px;
+        width: 26px;
+        background:black;
+        margin-top: -3px;
+        -webkit-appearance: none;
+        }
+
+        /* header4 */
+
+        .row4{
+            padding:30px; 
+            background-color:#ffc20d;
+        }
+        .letter{
+            width:100%; 
+            padding:30px;
+        }
+        .news{
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
+        .inputs{
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content:space-between;
+        }
+        .inputs > div{
+            width:24%;
+        }
+        .input1 > input{
+            padding: 6px;  
+            font-size: 15px;
+            border: 1px solid #ffe187; 
+            background-color:#ffe187;
+        }
+        .input2{
+            width:20%;
+        }
+        .input2 > button{
+            padding: 6px 10px; 
+            background-color: #323232; 
+            color:white; 
+            font-size: 15px; 
+            border: 1px solid #323232;
+        }
+
+        /* header5 */
+
+        .row5{
+            padding:30px; 
+            background-color:#323232;
+            color:white;
+        }
+        .members{
+            width:100%; 
+            display: flex; 
+            flex-wrap: wrap;
+        }
+        .team{
+            text-align: center; 
+            padding:20px;
+        }
+        .pics{
+            width:100%; 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-between;
+            padding:20px;
+        }
+        .pics1 > img{
+            border: 8px solid #ffc20d; 
+            border-radius: 50%;
+        }
+        .pics1 > p{
+            line-height: 2;
+        }
+        .pics1 > button{
+            background-color: #ffc20d; 
+            color:white; 
+            font-size: 30px; 
+            width:40%; 
+            border: 1px solid #ffc20d; 
+            border-radius: 5px;
+        }
+        .pics div{
+            width:20%;
+            text-align: center;
+        }
+
+        /* header6 */
+
+        .row6{
+            padding:30px;
+        }
+        .tabs{
+            width:100%; 
+            display: flex; 
+            flex-wrap: wrap;
+        }
+        .portfolio{
+            display: flex; 
+            flex-wrap: wrap; 
+            text-align: center; 
+            padding:20px; 
+            justify-content: center;
+        }
+        .buttons{
+            display: flex; 
+            flex-wrap: wrap; 
+            width:100%; 
+            justify-content: center;
+        }
+        .buttons > div{
+            margin:10px;
+        }
+        .buttons  button{
+            padding:10px;
+            color:black; 
+            font-size: 17px; 
+            border: 1px solid #ffc20d; 
+            border-radius: 5px;
+        }
+
+        /* header7 */
+
+        .row7{
+            padding:30px;
+        }
+        .gallery{
+            width:100%; 
+            display: grid; 
+            grid-template-columns: 30% 30% 30% ; 
+            grid-template-rows: auto auto auto; 
+            gap: 40px 40px; 
+            justify-content: space-between;
+        }
+        .footer{ 
+            background-position:  bottom center ; 
+            height:300px;  
+            display: grid; 
+            align-items: end;
+        }
+        .footer1{
+            
+            background-position:  center center ; 
+            height:300px;  
+            display: grid; 
+            align-items: end;
+        }
+        .footerbg{
+            text-align:left;
+            color:white;
+            padding:6px;
+            background-color:rgba(0,0,0,0.5);
+        }
+
+        /* header8 */
+
+        .row8{
+            padding:30px;
+            background-image:url('images/bgfoot.avif'); 
+            background-position: center center; 
+            height:auto;
+        }
+        .end{
+            width:100%; 
+            text-align: center; 
+            color:white;
+        }
+        .end1{
+            width:100%; 
+            padding:30px; 
+            display: grid; 
+            row-gap: 20px; 
+            grid-template-columns: 100%; 
+            justify-items: center;
+        }
+        .end1 > input{
+            padding: 6px; 
+            width:50%;
+            font-size: 15px;
+            border: 1px solid white;
+        }
+        .end1 > textarea{
+            font-size: 15px;
+            border: 1px solid white;
+        }
+        .end1 > button{
+            padding: 6px 10px; 
+            background-color: #ffc20d; 
+            color:black; 
+            font-size: 17px;
+            border: 1px solid #ffc20d; 
+            padding:10px;
+        }
+        .end2{
+            display: grid; 
+            color:white;
+            align-items: end; 
+            width:100%;
+            padding-top:30px; 
+            text-align: center;
+        }
+        .end2 > p{
+            margin:0; 
+            font-size: small;
+        }
+        @media (max-width: 576px){
+            .logo{
+                width:100%;
+                justify-content: center;
+            }
+            .cando1{
+                width:100%;
+            }
+            .cando2{
+                width:100%;
+            }
+            .inputs > div{
+                width:100%;
+                padding:30px;
+            }
+            .pics > div{
+                width:100%;
+                padding:50px;
+            }
+            .gallery{
+                grid-template-columns: 100%;
+            }
+        }
+
+    </style>
+    <body>
+        <header class="row1">
+            <div class="row1bg">
+                <div class="inside">
+                    <div class="head1">
+                        <div class="logo">
+                            <p>LOGO DESIGN</p>
+                        </div>
+                        <div class="nav">
+                            <p>Home</p>
+                            <p>About</p>
+                            <p>Team</p>
+                            <p>Portfolio</p>
+                            <p>Contact</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="row2">
+            <div class="center">
+                <h1>Nice To Meet You</h1>
+                <p><b>We Just Don't Build Websites, We Build Brands</b></p>
+                <button type="submit" aria-label="touch" ><b> GET IN TOUCH </b></button>
+            </div>
+        </header>
+        <header class="row3">
+            <div class="inside">
+                <div class="aboutus">
+                    <p><b>ABOUT US</b></p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos magni explicabo laboriosam libero nostrum, est sapiente autem quo consequuntur, quasi minus ipsam repudiandae amet corporis vero recusandae consequatur tempore iusto!</p>
+                </div>
+                <div class="cando">
+                    <div class="cando1">
+                        <p><b>WHAT WE CAN DO</b></p>
+                        <p>Lorem ipsum dolor sit, amet consectetur reprehenderit id nostrum, velit quibusdam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa mollitia recusandae, eaque obcaecati deserunt animi at earum. Recusandae quia, laboriosam illo necessitatibus numquam molestias, repellat reprehenderit possimus eos enim neque?</p>
+                    </div>
+                    <div class="cando2">
+                        <label for="vol1"> DESIGN </label><br>
+                        <input type="range" id="vol1" name="vol" min="0" max="50"><br>
+                        <label for="vol2"> CODING </label><br>
+                        <input type="range" id="vol2" name="vol" min="0" max="50"><br>
+                        <label for="vol3"> MARKETING </label><br>
+                        <input type="range" id="vol3" name="vol" min="0" max="50">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="row4">
+            <div class="inside">
+                <div class="letter">
+                    <div class="news">
+                        <p><b>SUBSCRIBE TO OUR NEWSLETTER</b></p>
+                    </div>
+                    <div class="inputs">
+                        <div class="input1">
+                            <input type="text" placeholder="FIRST NAME" name="search">
+                        </div>
+                        <div class="input1">
+                            <input type="text" placeholder="LAST NAME" name="search">
+                        </div>
+                        <div class="input1">
+                            <input type="text" placeholder="E-MAIL ADDRESS" name="search">
+                        </div>
+                        <div class="input2">
+                            <button type="submit" aria-label="touch"><b> SUBSCRIBE </b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="row5">
+            <div class="inside">
+                <div class="members">
+                    <div class="team">
+                        <p><b>OUR TEAM</b></p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos magni explicabo laboriosam libero nostrum, est sapiente autem quo consequuntur, quasi minus ipsam repudiandae amet corporis vero recusandae consequatur tempore iusto!</p>
+                    </div>
+                    <div class="pics">
+                        <div class="pics1">
+                            <img src="/images/pic11.avif" alt="pic1" width="20%" height="0">
+                            <p><b>NAME</b></p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quibusdam.</p>
+                            <button type="submit" aria-label="touch"> &#x2709;</button>
+                        </div>
+                        <div class="pics1">
+                            <img src="/images/pic22.avif" alt="pic2" width="20%" height="0">
+                            <p><b>NAME</b></p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quibusdam.</p>
+                            <button type="submit" aria-label="touch"> &#x2709;</button>
+                        </div>
+                        <div class="pics1">
+                            <img src="/images/pic33.avif" alt="pic3" width="20%" height="0">
+                            <p><b>NAME</b></p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quibusdam.</p>
+                            <button type="submit" aria-label="touch"> &#x2709;</button>
+                        </div>
+                        <div class="pics1">
+                            <img src="/images/pic44.avif" alt="pic4" width="20%" height="0">
+                            <p><b>NAME</b></p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quibusdam.</p>
+                            <button type="submit" aria-label="touch"> &#x2709;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="row6">
+            <div class="inside">
+                <div class="tabs">
+                    <div class="portfolio">
+                        <p><b>PORTFOLIO</b></p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos magni explicabo laboriosam libero nostrum, est sapiente autem quo consequuntur, quasi minus ipsam repudiandae amet corporis vero recusandae consequatur tempore iusto!</p>
+                    </div>
+                    <div class="buttons">
+                        <div>
+                            <button type="submit" aria-label="touch">All</button>
+                        </div>
+                        <div>
+                            <button type="submit" aria-label="touch"> Design</button>
+                        </div>
+                        <div>
+                            <button type="submit" aria-label="touch"> Identity</button>
+                        </div>
+                        <div>
+                            <button type="submit" aria-label="touch"> Photography</button>
+                        </div>
+                        <div>
+                            <button type="submit" aria-label="touch"> Illustration</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="row7">
+            <div class="inside">
+                <div class="gallery">
+                    <div class="footer" style="background-image: url('images/r1c1.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="footer" style="background-image: url('images/r1c2.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="footer" style="background-image: url('images/r1c3.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="footer" style="background-image: url('images/r2c1.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="footer" style="background-image: url('images/r1c3.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="footer1" style="background-image: url('images/r2c3.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="footer1" style="background-image: url('images/r3c1.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="footer1" style="background-image: url('/images/r1c1.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="footer1" style="background-image: url('images/r2c1.avif');">
+                        <div class="footerbg">
+                            <p><b>Title</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header  class="row8">
+            <div class="inside">
+                <div class="end">
+                    <p><b>CONTACT</b></p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos magni explicabo laboriosam libero nostrum, est sapiente autem quo consequuntur, quasi minus ipsam repudiandae amet corporis vero recusandae consequatur tempore iusto!</p>
+                </div>
+                <div class="end1">                        
+                    <input type="text" placeholder="Enter Your Name" name="search">
+                    <input type="text" placeholder="Enter Your Address" name="search">
+                    <input type="text" placeholder="Enter Your City" name="search">
+                    <input type="text" placeholder="Enter Your Email Address" name="search">
+                    <textarea rows="6" cols="58" placeholder="Enter Your Email Message"></textarea>
+                    <button type="submit" aria-label="touch"><b> SUBMIT </b></button>
+                </div>
+                <div class="end2">
+                    <p> Home    :   About   :   Team    :   Portfolio   :   Contact</p>
+                    <p>Copyrights &#169; Logodesign 2001. All Rights Reserved</p>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>
